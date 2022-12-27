@@ -12,6 +12,11 @@
     <script src="vendors/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="vendors/bootstrap-icons-1.10.2/bootstrap-icons.css">
+
+    <!-- JS Script -->
+    <script src="resources/js/script.js"></script>
+    <!-- JS Functions -->
+    <script src="resources/js/functions.js"></script>
 </head>
 <body>
     <div class="container p-5">
@@ -25,8 +30,8 @@
         <div class="row justify-content-center pt-5">
             <div class="col-auto">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Password">
-                    <button class="btn btn-outline-primary" type="button">
+                    <input type="text" class="form-control" placeholder="Password" id="passwordGenerated">
+                    <button class="btn btn-outline-primary" onclick="copyClipboard()" id="buttonClipboard">
                         <i class="bi bi-clipboard"></i>
                     </button>
                 </div>
