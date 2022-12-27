@@ -31,69 +31,89 @@
             <div class="col-auto">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Password" id="passwordGenerated">
-                    <button class="btn btn-outline-primary" onclick="copyClipboard()" id="buttonClipboard">
+                    <button class="btn btn-outline-dark" onclick="copyClipboard()" id="buttonClipboard">
                         <i class="bi bi-clipboard"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Length -->
-        <div class="row justify-content-center">
+        <form>
+            <!-- Length -->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <label for="inputPassword">Length:</label>
+                </div>
+                <div class="col-auto col-md-2">
+                    <input type="number" class="form-control form-control-sm" min="5" max="20" id="lengthInput">
+                    <label class="fs-6 text-center fst-italic text-muted" for="inputPassword">Length: 5 - 20</label>
+                </div>
+            </div>
+            <!-- Includes -->
+            <div class="row justify-content-center">
+                <div class="col-auto pt-3">
+                    Include Symbols
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="symbolsCheck" value="check">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto pt-3 ">
+                    Include Numbers
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="numbersCheck">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto pt-3 ">
+                    Include Upper Case
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="upperCheck">
+                    </div>
+                </div>
+            </div>
+            <!-- Button Generate -->
+            <div class="row justify-content-center pt-3">
+                <div class="col-auto">
+                    <button type="button" class="btn btn-success btn-sm" onclick="generatePassword()">Generate Password</button>
+                </div>
+            </div>
+            <!-- Button Generate -->
+            <div class="row justify-content-center pt-3">
+                <div class="col-auto">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.reload()">Clear</button>
+                </div>
+            </div>
+        </form>
+        <div class="row justify-content-center pt-3" id="successCopyAlert">
             <div class="col-auto">
-                <label for="inputPassword">Length:</label>
-            </div>
-            <div class="col-auto col-md-2">
-                <input type="number" class="form-control form-control-sm" id="">
-            </div>
-        </div>
-        <!-- Includes -->
-        <div class="row justify-content-center">
-            <div class="col-auto pt-3">
-                Include Symbols
-            </div>
-            <div class="col-auto pt-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
+                <!-- Alert Clipboard -->
+                <div class="alert alert-success align-items-center" role="alert">
+                    <div class="text-center">
+                        <i class="bi bi-check-circle-fill"></i> Password has been copied in the clipboard
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-auto pt-3 ">
-                Include Numbers
-            </div>
-            <div class="col-auto pt-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-auto pt-3 ">
-                Include Lower Case
-            </div>
-            <div class="col-auto pt-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-auto pt-3 ">
-                Include Upper Case
-            </div>
-            <div class="col-auto pt-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center pt-3">
+        <div class="row justify-content-center pt-3" id="warningAlert">
             <div class="col-auto">
-                <button type="button" class="btn btn-primary btn-sm">Generate Password</button>
+                <!-- Alert Error -->
+                <div class="alert alert-warning align-items-center" role="alert">
+                    <div class="text-center">
+                        <i class="bi bi-exclamation-circle-fill"></i> Length isn't valid.
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row justify-content-center pt-5">
-            <div class="col-auto">
+        <div class="row justify-content-center">
+            <div class="col-auto pt-3">
                 <h6 class="text-center">
                     <a href="https://github.com/diegoasp10/password_generator_js.git" target="_blank">
                         GitHub Repository <i class="bi bi-github"></i>

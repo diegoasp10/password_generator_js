@@ -2,21 +2,64 @@
 function copyClipboard(){
     // Get the text field
     var copyText = document.getElementById("passwordGenerated");
-    // Select the text field
-    copyText.select();
-    // Select for mobile devices
-    copyText.setSelectionRange(0, 99999);
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value);
-    // Alert the copied text
-    alert("The password has been copied");
+    if(!copyText.value == ""){
+        // Select the text field
+        copyText.select();
+        // Select for mobile devices
+        copyText.setSelectionRange(0, 99999);
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+        // Get Clipboard Alert
+        var clipboardAlert = document.getElementById("successCopyAlert");
+        clipboardAlert.style.display = "block";
+        setTimeout(
+            function(){
+                clipboardAlert.style.display = "none";
+            }, 5000
+        );
+    }
+    
 }
 
-// Function change state button if input changes
-function changeStateButton() {
-    if(document.getElementById("passwordGenerated").value === ""){
-        document.getElementById("buttonClipboard").disabled = true; 
+function generatePassword(){
+    var passwordGenerated = document.getElementById("passwordGenerated");
+    var warningAlert = document.getElementById("warningAlert");
+    var lengthInput = document.getElementById("lengthInput");
+    var symbolsCheck = document.getElementById("symbolsCheck")
+    var numbersCheck = document.getElementById("numbersCheck")
+    var upperCheck = document.getElementById("upperCheck")
+
+    var password = ''
+    var lowerChars = "abcdefghijklmnopqrstuvwxyz"
+    var symbolChars = "!@#$%^&*()_+ñ"
+    var numberChars = "0123456789"
+    var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var passwordLength = lengthInput.value
+
+    var chars = lowerChars
+    if(symbolsCheck.checked){
+        chars += symbolChars
+    }
+    if(numbersCheck.checked){
+        chars += numberChars
+    }
+    if(upperCheck.checked){
+        chars += upperChars
+    }
+
+    console.log(chars)
+
+    if(lengthInput.value > 20 || lengthInput.value < 5){
+        warningAlert.style.display = "block";
+        setTimeout(
+            function(){
+                warningAlert.style.display = "none";
+            }, 5000
+        );
     }else{
-        document.getElementById("buttonClipboard").disabled = false;
+        for (var i=0;i<passwordLength;i++){
+            password += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        passwordGenerated.value = password
     }
 }

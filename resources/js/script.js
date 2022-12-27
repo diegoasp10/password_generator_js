@@ -6,17 +6,17 @@ setTimeout(
 
 function main(){
     // Get input password
-    let passwordGenerated = document.getElementById("passwordGenerated");
-    // Get clipboard button
-    let buttonClipboard = document.getElementById("buttonClipboard"); 
+    var passwordGenerated = document.getElementById("passwordGenerated");
+    // Get clipboard alert
+    var clipboardAlert = document.getElementById("successCopyAlert");
+    // Get warning alert
+    var warningAlert = document.getElementById("warningAlert");
+    var lengthInput = document.getElementById("lengthInput");
     // Disable the input (read only)
     passwordGenerated.readOnly = true;
-    // Disable clipboard button
-    buttonClipboard.disabled = true;
-    /* 
-    // Add event listener for check output password changes and changes 
-    // state clipboard button to enable
-    */
-    passwordGenerated.addEventListener("change", changeStateButton);
+    // Hide Alerts
+    clipboardAlert.style.display = "none";
+    warningAlert.style.display = "none";
+    lengthInput.value = 12
 };
 
