@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="vendors/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="vendors/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="vendors/bootstrap-icons-1.10.2/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container p-5">
+        <!-- Title -->
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <h1>Password Generator</h1>
+            </div>
+        </div>
+        <!-- Output Password -->
+        <div class="row justify-content-center pt-5">
+            <div class="col-auto">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Password">
+                    <button class="btn btn-outline-primary" type="button">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Length -->
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <label for="inputPassword">Length:</label>
+            </div>
+            <div class="col-auto col-md-2">
+                <input type="number" class="form-control form-control-sm" id="">
+            </div>
+        </div>
+        <!-- Includes -->
+        <div class="row justify-content-center">
+            <div class="col-auto pt-3">
+                Include Symbols
+            </div>
+            <div class="col-auto pt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto pt-3 ">
+                Include Numbers
+            </div>
+            <div class="col-auto pt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto pt-3 ">
+                Include Lower Case
+            </div>
+            <div class="col-auto pt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto pt-3 ">
+                Include Upper Case
+            </div>
+            <div class="col-auto pt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3">
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary btn-sm">Generate Password</button>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-5">
+            <div class="col-auto">
+                <h6 class="text-center">
+                    <a href="https://github.com/diegoasp10/password_generator_js.git" target="_blank">
+                        GitHub Repository <i class="bi bi-github"></i>
+                    </a>
+                </h6>
+                <h6 class="text-center">
+                    <a href="https://github.com/diegoasp10" target="_blank">
+                        diegoasp10
+                    </a>
+                </h6>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
