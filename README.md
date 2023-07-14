@@ -15,7 +15,7 @@ To use the password generator, simply open the index.html file in your web brows
 4. Click the "Copy" button to copy the generated password to the clipboard.
 
 ## Example
-
+![Screenshot from 2023-07-13 19-26-04](https://github.com/diegoasp10/password_generator_js/assets/99521321/44896032-3f4f-4523-9500-6aa1e7f11448)
 
 ## Contributing
 Contributions are welcome! If you have any ideas or improvements, feel free to create an issue or submit a pull request.
